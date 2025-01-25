@@ -1,0 +1,128 @@
+D:\Semester 6\Adv . net\ApiConsume\bin\Debug\net8.0\appsettings.Development.json
+D:\Semester 6\Adv . net\ApiConsume\bin\Debug\net8.0\appsettings.json
+D:\Semester 6\Adv . net\ApiConsume\bin\Debug\net8.0\ApiConsume.staticwebassets.runtime.json
+D:\Semester 6\Adv . net\ApiConsume\bin\Debug\net8.0\ApiConsume.exe
+D:\Semester 6\Adv . net\ApiConsume\bin\Debug\net8.0\ApiConsume.deps.json
+D:\Semester 6\Adv . net\ApiConsume\bin\Debug\net8.0\ApiConsume.runtimeconfig.json
+D:\Semester 6\Adv . net\ApiConsume\bin\Debug\net8.0\ApiConsume.dll
+D:\Semester 6\Adv . net\ApiConsume\bin\Debug\net8.0\ApiConsume.pdb
+D:\Semester 6\Adv . net\ApiConsume\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Semester 6\Adv . net\ApiConsume\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Semester 6\Adv . net\ApiConsume\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Semester 6\Adv . net\ApiConsume\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\ApiConsume.csproj.AssemblyReference.cache
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\ApiConsume.GeneratedMSBuildEditorConfig.editorconfig
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\ApiConsume.AssemblyInfoInputs.cache
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\ApiConsume.AssemblyInfo.cs
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\ApiConsume.csproj.CoreCompileInputs.cache
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\ApiConsume.MvcApplicationPartsAssemblyInfo.cache
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\ApiConsume.RazorAssemblyInfo.cache
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\ApiConsume.RazorAssemblyInfo.cs
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\staticwebassets.build.json
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\staticwebassets.development.json
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\staticwebassets\msbuild.ApiConsume.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\staticwebassets\msbuild.build.ApiConsume.props
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ApiConsume.props
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ApiConsume.props
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\staticwebassets.pack.json
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\scopedcss\bundle\ApiConsume.styles.css
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\scopedcss\projectbundle\ApiConsume.bundle.scp.css
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\ApiConsume.csproj.Up2Date
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\ApiConsume.dll
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\refint\ApiConsume.dll
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\ApiConsume.pdb
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\ApiConsume.genruntimeconfig.cache
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\ref\ApiConsume.dll
+D:\Semester 6\Adv . net\ApiConsume\obj\Debug\net8.0\ApiConsume.MvcApplicationPartsAssemblyInfo.cs
+D:\Semester 6\Adv . net\ApiConsume\bin\Debug\net8.0\FluentValidation.dll
+D:\Semester 6\Adv . net\ApiConsume\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+D:\Semester 6\Adv . net\ApiConsume\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\bin\Debug\net8.0\appsettings.json
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\bin\Debug\net8.0\ApiConsume.staticwebassets.runtime.json
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\bin\Debug\net8.0\ApiConsume.staticwebassets.endpoints.json
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\bin\Debug\net8.0\ApiConsume.exe
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\bin\Debug\net8.0\ApiConsume.deps.json
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\bin\Debug\net8.0\ApiConsume.runtimeconfig.json
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\bin\Debug\net8.0\ApiConsume.dll
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\bin\Debug\net8.0\ApiConsume.pdb
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.csproj.AssemblyReference.cache
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.AssemblyInfoInputs.cache
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.AssemblyInfo.cs
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.csproj.CoreCompileInputs.cache
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.RazorAssemblyInfo.cache
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.RazorAssemblyInfo.cs
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\scopedcss\bundle\ApiConsume.styles.css
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\scopedcss\projectbundle\ApiConsume.bundle.scp.css
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\staticwebassets\msbuild.ApiConsume.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\staticwebassets\msbuild.ApiConsume.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\staticwebassets\msbuild.build.ApiConsume.props
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ApiConsume.props
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ApiConsume.props
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.csproj.Up2Date
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.dll
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\refint\ApiConsume.dll
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.pdb
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.genruntimeconfig.cache
+C:\Users\krish\Desktop\Coffee_shop_complete\ApiConsume\ApiConsume\obj\Debug\net8.0\ref\ApiConsume.dll
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\bin\Debug\net8.0\appsettings.Development.json
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\bin\Debug\net8.0\appsettings.json
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\bin\Debug\net8.0\ApiConsume.staticwebassets.runtime.json
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\bin\Debug\net8.0\ApiConsume.staticwebassets.endpoints.json
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\bin\Debug\net8.0\ApiConsume.exe
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\bin\Debug\net8.0\ApiConsume.deps.json
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\bin\Debug\net8.0\ApiConsume.runtimeconfig.json
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\bin\Debug\net8.0\ApiConsume.dll
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\bin\Debug\net8.0\ApiConsume.pdb
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\bin\Debug\net8.0\FluentValidation.dll
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\bin\Debug\net8.0\Newtonsoft.Json.dll
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.csproj.AssemblyReference.cache
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.GeneratedMSBuildEditorConfig.editorconfig
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.AssemblyInfoInputs.cache
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.AssemblyInfo.cs
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.csproj.CoreCompileInputs.cache
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.MvcApplicationPartsAssemblyInfo.cs
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.MvcApplicationPartsAssemblyInfo.cache
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.RazorAssemblyInfo.cache
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.RazorAssemblyInfo.cs
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\scopedcss\bundle\ApiConsume.styles.css
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\scopedcss\projectbundle\ApiConsume.bundle.scp.css
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\staticwebassets.build.json
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\staticwebassets.development.json
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\staticwebassets\msbuild.ApiConsume.Microsoft.AspNetCore.StaticWebAssets.props
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\staticwebassets\msbuild.ApiConsume.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\staticwebassets\msbuild.build.ApiConsume.props
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ApiConsume.props
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ApiConsume.props
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\staticwebassets.pack.json
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.csproj.Up2Date
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.dll
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\refint\ApiConsume.dll
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.pdb
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\ApiConsume.genruntimeconfig.cache
+B:\LAB WORK\6th .NET\ApiConsume\ApiConsume\obj\Debug\net8.0\ref\ApiConsume.dll

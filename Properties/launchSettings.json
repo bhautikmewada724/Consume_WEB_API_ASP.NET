@@ -4,8 +4,13 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
+<<<<<<< HEAD
       "applicationUrl": "http://localhost:59784",
       "sslPort": 44386
+=======
+      "applicationUrl": "http://localhost:50271",
+      "sslPort": 44351
+>>>>>>> cc8f604 (Created API's for more tables and tested it sucessfully.)
     }
   },
   "profiles": {
@@ -13,8 +18,12 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
+<<<<<<< HEAD
       "launchUrl": "swagger",
       "applicationUrl": "http://localhost:5232",
+=======
+      "applicationUrl": "http://localhost:5201",
+>>>>>>> cc8f604 (Created API's for more tables and tested it sucessfully.)
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -23,8 +32,12 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
+<<<<<<< HEAD
       "launchUrl": "swagger",
       "applicationUrl": "https://localhost:7077;http://localhost:5232",
+=======
+      "applicationUrl": "https://localhost:7291;http://localhost:5201",
+>>>>>>> cc8f604 (Created API's for more tables and tested it sucessfully.)
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -32,7 +45,10 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
+<<<<<<< HEAD
       "launchUrl": "swagger",
+=======
+>>>>>>> cc8f604 (Created API's for more tables and tested it sucessfully.)
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

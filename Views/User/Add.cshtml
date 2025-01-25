@@ -1,0 +1,95 @@
+﻿@model UserModel
+
+<div class="card">
+    <div class="card-body">
+        @if (@ViewBag.UserID == null || @ViewBag.UserID == 0)
+        {
+
+            <h5 class="card-title"> Add User </h5>
+        }
+        else
+        {
+
+            <h5 class="card-title"> Edit User  </h5>
+        }
+        <!-- Multi Columns Form -->
+        <form class="row g-3" asp-action="Save">
+            <input type="hidden" class="form-control" id="userID" asp-for="UserID">
+
+            <div class="col-md-12">
+                <label for="userName" class="form-label"><span class="text-danger">*</span>User Name</label>
+                <input type="text" class="form-control" id="userame" asp-for="UserName">
+                <span class="text-danger" asp-validation-for="UserName"></span>
+            </div>
+
+            <div class="col-md-12">
+                <label for="email" class="form-label"><span class="text-danger">*</span>Email</label>
+                <input type="text" class="form-control" id="email" asp-for="Email">
+                <span class="text-danger" asp-validation-for="Email"></span>
+            </div>
+            <div class="col-md-12">
+                <label for="password" class="form-label"><span class="text-danger">*</span>Password</label>
+                <input type="text" class="form-control" id="password" asp-for="Password">
+            </div>
+
+
+            <div class="col-md-12">
+                <label for="mobileNo" class="form-label"><span class="text-danger">*</span>MobileNo</label>
+                <input type="text" class="form-control" id="mobileNo" asp-for="MobileNo">
+                <span class="text-danger" asp-validation-for="MobileNo"></span>
+
+            </div>
+
+            <div class="col-md-12">
+                <label for="address" class="form-label"><span class="text-danger">*</span>Address</label>
+                <textarea type="text" class="form-control" id="address" asp-for="Address"></textarea>
+                <span class="text-danger" asp-validation-for="Address"></span>
+
+            </div>
+            @if (ViewBag.UserID != null && ViewBag.UserID != 0)
+            {
+
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck isActive" asp-for="IsActive">
+                        <label class="form-check-label" for="gridCheck">
+                            <span class="text-danger">*</span>
+                            Is Active
+                        </label>
+                        <span class="text-danger" asp-validation-for="IsActive"></span>
+
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck isActive" disabled checked
+                               asp-for="IsActive">
+                        <label class="form-check-label" for="gridCheck">
+                            <span class="text-danger">*</span>
+                            Is Active
+                        </label>
+                        <span class="text-danger" asp-validation-for="IsActive"></span>
+
+                    </div>
+                </div>
+            }
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <a asp-controller="User" asp-action="Index" class="btn btn-secondary">Back</a>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+
+}

@@ -1,0 +1,86 @@
+﻿@model List<ProductModel>
+@{
+    ViewData["Title"] = "Product List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="pagetitle">
+    <h1>Product</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a asp-controller="Home" asp-action="Index">
+                    <i class="fa fa-home"></i>
+                </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Product List</li>
+        </ol>
+    </nav>
+    <div class="d-flex justify-content-end align-items-center">
+        <a class="btn btn-outline-primary" asp-action="Add" asp-controller="Product">
+            <i class="bi bi-plus-lg"></i>&nbsp;Add Product
+        </a>
+    </div>
+</div><!-- End Page Title -->
+@if (TempData["ProductInsertMsg"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["ProductInsertMsg"]
+    </div>
+}
+
+<div class="mb-3">
+    <input type="text" class="form-control" id="stateSearch" placeholder="Search Any">
+</div>
+
+<table class="table table-hover table-header-fixed">
+    <thead>
+        <tr>
+            <td>ProductName</td>
+            <td>ProductCode</td>
+            <td>ProductPrice</td>
+            <td>Description</td>
+            <td>UserName</td>
+            <th class="text-center">Actions</th>
+        </tr>
+    </thead>
+    <tbody id="stateTable">
+        @foreach (var product in Model)
+        {
+            <tr>
+
+                <td>@product.ProductName</td>
+                <td>@product.ProductCode</td>
+                <td>@product.ProductPrice</td>
+                <td>@product.Description</td>
+                <td>@product.UserName</td>
+                <td class="d-flex text-center">
+                    <a class="btn btn-outline-success btn-xs me-2 " asp-action="Add" asp-route-ProductID="@product.ProductID">
+                        <i class="bi bi-pencil-fill"></i>
+                    </a>
+                    <form asp-action="Delete"
+                          asp-route-ProductID="@product.ProductID"
+                          method="post">
+                        <button class="btn btn-outline-danger btn-xs d-flex" type="submit"><i class="bi bi-x"></i></button>
+                    </form>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+</>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#stateSearch").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#stateTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+            });
+        });
+    </script>
+}

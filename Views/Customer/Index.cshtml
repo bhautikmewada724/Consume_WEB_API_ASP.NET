@@ -1,0 +1,95 @@
+﻿@model List<CustomerModel>
+@{
+    ViewData["Title"] = "Customer List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="pagetitle">
+    <h1>Customer</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a asp-controller="Home" asp-action="Index">
+                    <i class="fa fa-home"></i>
+                </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Customer List</li>
+        </ol>
+    </nav>
+    <div class="d-flex justify-content-end align-items-center">
+        <a class="btn btn-outline-primary" asp-action="Add" asp-controller="Customer">
+            <i class="bi bi-plus-lg"></i>&nbsp;Add Customer
+        </a>
+    </div>
+</div><!-- End Page Title -->
+@if (TempData["CustomerInsertMsg"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["CustomerInsertMsg"]
+    </div>
+}
+
+<div class="mb-3">
+    <input type="text" class="form-control" id="stateSearch" placeholder="Search Any">
+</div>
+
+<table class="table table-hover table-header-fixed">
+    <thead>
+        <tr>
+            <td>Customer Name</td>
+            <td>Email</td>
+            <td>Mobile No</td>
+            <td>GST NO</td>
+            <td>Home Address</td>
+            <td>City Name</td>
+            <td>PinCode</td>
+            <td>Net Amount</td>
+            <td>User Name</td>
+            <th class="text-center">Actions</th>
+        </tr>
+    </thead>
+    <tbody id="stateTable">
+        @foreach (var customer in Model)
+        {
+            <tr>
+                
+                <td>@customer.CustomerName</td>
+                <td>@customer.Email</td>
+                <td>@customer.MobileNo</td>
+                <td>@customer.GSTNO</td>
+                <td>@customer.HomeAddress</td>
+                <td>@customer.CityName</td>
+                <td>@customer.PinCode</td>
+                <td>@customer.NetAmount</td>
+                <td>@customer.UserName</td>
+
+                <td class="d-flex text-center">
+                    <a class="btn btn-outline-success btn-xs me-2 " asp-action="Add" asp-route-CustomerID="@customer.CustomerID">
+                        <i class="bi bi-pencil-fill"></i>
+                    </a>
+                    <form asp-action="Delete"
+                          asp-route-CustomerID="@customer.CustomerID"
+                          method="post">
+                        <button class="btn btn-outline-danger btn-xs d-flex" type="submit"><i class="bi bi-x"></i></button>
+                    </form>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+</>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#stateSearch").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#stateTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+            });
+        });
+    </script>
+}

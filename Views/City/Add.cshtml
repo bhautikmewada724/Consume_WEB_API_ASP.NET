@@ -1,0 +1,131 @@
+﻿@model CityModel
+
+<div class="card">
+    <div class="card-body">
+        @if (@ViewBag.CityID == null || @ViewBag.CityID == 0)
+        {
+
+            <h5 class="card-title"> Add City </h5>
+        }
+        else
+        {
+
+            <h5 class="card-title"> Edit City  </h5>
+        }
+        <!-- Multi Columns Form -->
+        <form class="row g-3" asp-action="Save">
+            <input type="hidden" class="form-control" id="cityID" asp-for="CityID">
+
+            <div class="col-md-12">
+                <label for="cityName" class="form-label"><span class="text-danger">*</span>City Name</label>
+                <input type="text" class="form-control" id="cityName" asp-for="CityName">
+                <span class="text-danger" asp-validation-for="CityName"></span>
+            </div>
+
+            <div class="col-md-12">
+                <label for="cityCode" class="form-label"><span class="text-danger">*</span>City Code</label>
+                <input type="text" class="form-control" id="cityCode" asp-for="CityCode">
+                <span class="text-danger" asp-validation-for="CityCode"></span>
+            </div>
+
+
+
+
+            <div class="col-md-12">
+                <label for="countryID" class="form-label"><span class="text-danger">*</span>Country </label>
+                <select id="countryID" class="form-control form-select" asp-for="CountryID" onchange="selectcountry(event)">
+                    <option value="">Select Country</option>
+                    @foreach (var country in ViewBag.countryList)
+                    {
+
+                        <option value="@country.CountryID">@country.CountryName</option>
+                    }
+                </select>
+                <span asp-validation-for="CountryID" class="text-danger"></span>
+
+            </div>
+
+
+
+
+            @if (ViewBag.StateList != null)
+            {
+                <div class="col-md-12">
+                    <label for="stateID" class="form-label"><span class="text-danger">*</span>State </label>
+                    <select id="stateID" class="form-control form-select" asp-for="StateID">
+                        <option value="">Select State</option>
+                        @foreach (var state in ViewBag.stateList)
+                        {
+                            <option value="@state.StateID">@state.StateName</option>
+                        }
+                    </select>
+                    <span asp-validation-for="StateID" class="text-danger"></span>
+
+                </div>
+            }
+            else
+            {
+                <div class="col-md-12">
+                    <label for="stateID" class="form-label"><span class="text-danger">*</span>State </label>
+                    <select id="stateID" class="form-control form-select" asp-for="StateID">
+                        <option value="">Select State</option>
+                    </select>
+                    <span asp-validation-for="StateID" class="text-danger"></span>
+
+                </div>
+            }
+
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <a asp-controller="City" asp-action="Index" class="btn btn-secondary">Back</a>
+            </div>
+        </form><!-- End Multi Columns Form -->
+       @*  <form id="form2" asp-action="CityAddEdit">
+        </form> *@
+    </div>
+    <script>
+
+        function selectcountry(e) {
+
+            // console.log("event::", e.target.value)
+
+            $.ajax({
+                url: '/City/GetStatesByCountry',
+                type: 'POST',
+                data: {CountryID: Number.parseInt(e.target.value)}, // Form values
+                success: function (response) {
+
+                     //console.log("Success: ", response);
+                    var stateDropdown = $("#stateID");
+
+                    // Clear the existing options
+                    stateDropdown.empty();
+
+                    // Add a default "Select State" option
+                    stateDropdown.append('<option value="">Select State</option>');
+
+                    // Populate the dropdown with new options from the response
+                    response.forEach(function (state) {
+                        stateDropdown.append(
+                            $('<option>'+state.StateName+'</option>')
+                                .val(state.stateID) // Set the value attribute
+                                .text(state.stateName) // Set the display text
+                        );
+                    });
+                },
+
+
+            });
+        }
+
+    </script>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+
+}

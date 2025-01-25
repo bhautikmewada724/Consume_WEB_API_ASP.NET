@@ -1,0 +1,107 @@
+﻿@model CustomerModel
+
+<div class="card">
+    <div class="card-body">
+        @if (@ViewBag.CustomerID == null || @ViewBag.CustomerID == 0)
+        {
+
+            <h5 class="card-title"> Add Customer </h5>
+        }
+        else
+        {
+
+            <h5 class="card-title"> Edit Customer  </h5>
+        }
+        <!-- Multi Columns Form -->
+        <form class="row g-3" asp-action="Save">
+            <input type="hidden" class="form-control" id="customerID" asp-for="CustomerID">
+
+            <div class="col-md-12">
+                <label for="customerName" class="form-label"><span class="text-danger">*</span>Customer Number</label>
+                <input type="text" class="form-control" id="customerName" asp-for="CustomerName">
+                <span asp-validation-for="CustomerName" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-12">
+                <label for="homeAddress" class="form-label"><span class="text-danger">*</span>Home Address</label>
+                <textarea class="form-control" id="homeAddress" asp-for="HomeAddress"></textarea>
+                <span asp-validation-for="HomeAddress" class="text-danger"></span>
+
+            </div>
+
+
+
+            <div class="col-md-12">
+                <label for="email" class="form-label"><span class="text-danger">*</span>Email</label>
+                <input type="text" class="form-control" id="email" asp-for="Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+
+            </div>
+
+
+            <div class="col-md-12">
+                <label for="mobileNo" class="form-label"><span class="text-danger">*</span>Mobile No</label>
+                <input type="text" class="form-control" id="mobileNo" asp-for="MobileNo">
+                <span asp-validation-for="MobileNo" class="text-danger"></span>
+
+            </div>
+
+            <div class="col-md-12">
+                <label for="GSTNO" class="form-label"><span class="text-danger">*</span>GST No</label>
+                <input type="text" class="form-control" id="GSTNO" asp-for="GSTNO">
+                <span asp-validation-for="GSTNO" class="text-danger"></span>
+
+            </div>
+
+            <div class="col-md-12">
+                <label for="cityName" class="form-label"><span class="text-danger">*</span>City Name</label>
+                <input type="text" class="form-control" id="cityName" asp-for="CityName">
+                <span asp-validation-for="CityName" class="text-danger"></span>
+
+            </div>
+
+            <div class="col-md-12">
+                <label for="pinCode" class="form-label"><span class="text-danger">*</span>Pin Code</label>
+                <input type="text" class="form-control" id="pinCode" asp-for="PinCode">
+                <span asp-validation-for="PinCode" class="text-danger"></span>
+
+            </div>
+
+            <div class="col-md-12">
+                <label for="netAmount" class="form-label"><span class="text-danger">*</span>Net Amount</label>
+                <input type="text" class="form-control" id="netAmount" asp-for="NetAmount">
+                <span asp-validation-for="NetAmount" class="text-danger"></span>
+
+            </div>
+
+            <div class="col-md-12">
+                <label for="userID" class="form-label"><span class="text-danger">*</span>User </label>
+                <select id="userID" class="form-control form-select" asp-for="UserID">
+                    <option value="">Select User</option>
+                    @foreach (var user in ViewBag.UserList)
+                    {
+
+                        <option value="@user.UserID">@user.UserName</option>
+                    }
+                </select>
+                <span asp-validation-for="UserID" class="text-danger"></span>
+
+            </div>
+
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <a asp-controller="Customer" asp-action="Index" class="btn btn-secondary">Back</a>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+
+}

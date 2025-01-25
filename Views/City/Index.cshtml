@@ -1,0 +1,88 @@
+﻿@model List<CityModel>
+@using ApiConsume.Helpers
+@{
+    ViewData["Title"] = "City List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <div class="pagetitle">
+        <h1>City</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a asp-controller="HomeMaster" asp-action="Index">
+                        <i class="fa fa-home"></i>
+                    </a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">City List</li>
+            </ol>
+        </nav>
+        <div class="d-flex justify-content-end align-items-center">
+            <a class="btn btn-outline-primary" asp-action="Add" asp-controller="City" >
+                <i class="bi bi-plus-lg"></i>&nbsp;Add City
+            </a>
+        </div>
+    </div><!-- End Page Title -->
+    @if (TempData["CityInsertMsg"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["CityInsertMsg"]
+        </div>
+    }
+     @if (TempData["CityDeleteMsg"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["CityDeleteMsg"]
+        </div>
+    }
+    <div class="mb-3">
+        <input type="text" class="form-control" id="citySearch" placeholder="Search Any">
+    </div>
+
+    <table class="table table-hover table-header-fixed">
+        <thead>
+            <tr>
+                <th scope="col">City Name</th>
+                <th scope="col">State Name</th>
+                <th scope="col">Country Name</th>
+                <th class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody id="cityTable">
+            @foreach (var city in Model)
+            {
+                <tr>
+                    <td>@city.CityName</td>
+                    <td>@city.StateName</td>
+                    <td>@city.CountryName</td>
+                <td class="d-flex ">
+                    <a class="btn btn-outline-success btn-xs me-2 " asp-action="Add" asp-route-EnCityID="@UrlEncryptor.Encrypt(@city.CityID.ToString())">
+                        <i class="bi bi-pencil-fill"></i>
+                    </a>
+                   <form asp-action="Delete"
+                          asp-route-EnCityID="@UrlEncryptor.Encrypt(@city.CityID.ToString())"
+                          method="post">
+                        <button class="btn btn-outline-danger btn-xs d-flex" type="submit"><i class="bi bi-x"></i></button>
+                    </form>
+                    
+                </td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+</>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#citySearch").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#cityTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+            });
+        });
+    </script>
+}

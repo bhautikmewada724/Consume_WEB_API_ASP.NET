@@ -1,0 +1,73 @@
+﻿@model ProductModel
+
+<div class="card">
+    <div class="card-body">
+        @if (@ViewBag.ProductID == null || @ViewBag.ProductID == 0)
+        {
+
+            <h5 class="card-title"> Add Product </h5>
+        }
+        else
+        {
+
+            <h5 class="card-title"> Edit Product  </h5>
+        }
+        <!-- Multi Columns Form -->
+        <form class="row g-3" asp-action="Save">
+            <input type="hidden" class="form-control" id="productID" asp-for="ProductID">
+
+            <div class="col-md-12">
+                <label for="productName" class="form-label"><span class="text-danger">*</span>Product Name</label>
+                <input type="text" class="form-control" id="productName" asp-for="ProductName">
+                <span class="text-danger" asp-validation-for="ProductName"></span>
+            </div>
+
+            <div class="col-md-12">
+                <label for="productCode" class="form-label"><span class="text-danger">*</span>Product Code</label>
+                <input type="text" class="form-control" id="productCode" asp-for="ProductCode">
+                <span class="text-danger" asp-validation-for="ProductCode"></span>
+            </div>
+
+            <div class="col-md-12">
+                <label for="inputName6" class="form-label"><span class="text-danger">*</span>Product Price</label>
+                <input type="text" class="form-control" id="productPrice" asp-for="ProductPrice">
+                <span class="text-danger" asp-validation-for="ProductPrice"></span>
+
+            </div>
+
+            <div class="col-md-12">
+                <label for="inputName6" class="form-label"><span class="text-danger">*</span>Description</label>
+                <input type="text" class="form-control" id="description" asp-for="Description">
+                <span class="text-danger" asp-validation-for="Description"></span>
+
+            </div>
+
+            <div class="col-md-12">
+                <label for="userID" class="form-label"><span class="text-danger">*</span>User </label>
+                <select id="userID" class="form-control form-select" asp-for="UserID" >
+                    <option value="">Select User</option>
+                    @foreach (var user in ViewBag.UserList)
+                    {
+
+                        <option value="@user.UserID">@user.UserName</option>
+                    }
+                </select>
+                <span asp-validation-for="UserID" class="text-danger"></span>
+
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <a asp-controller="Product" asp-action="Index" class="btn btn-secondary">Back</a>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+
+}

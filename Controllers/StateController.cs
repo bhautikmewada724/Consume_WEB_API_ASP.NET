@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebAPI_Practice.Data;
@@ -95,3 +96,110 @@ namespace WebAPI_Practice.Controllers
         
     }
 }
+=======
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+
+using ApiConsume.Models;
+using ApiConsume.Helpers;
+
+namespace ApiConsume.Controllers
+{
+    public class StateController : Controller
+    {
+        private readonly IConfiguration _configuration;
+        private readonly HttpClient _httpClient;
+
+        public StateController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+            _httpClient = new HttpClient
+            {
+                BaseAddress = new System.Uri(_configuration["WebApiBaseUrl"])
+            };
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            var response = await _httpClient.GetAsync("api/State");
+
+            if (response.IsSuccessStatusCode)
+            {
+                var data = await response.Content.ReadAsStringAsync();
+                var states = JsonConvert.DeserializeObject<List<StateModel>>(data);
+                return View(states);
+            }
+            return View(new List<StateModel>());
+        }
+
+        public async Task<IActionResult> Add(string? EnStateID)
+        {
+            await LoadCountryList();
+
+            if (!string.IsNullOrEmpty(EnStateID))
+            {
+                int? StateID = Convert.ToInt32(UrlEncryptor.Decrypt(EnStateID.ToString()));
+                var response = await _httpClient.GetAsync($"api/State/{StateID}");
+                ViewBag.StateID = StateID.Value;
+                if (response.IsSuccessStatusCode)
+                {
+                    var data = await response.Content.ReadAsStringAsync();
+                    var state = JsonConvert.DeserializeObject<StateModel>(data);
+                    
+                    return View(state);
+                }
+            }
+            return View(new StateModel());
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Save(StateModel state)
+        {
+            if (ModelState.IsValid)
+            {
+                var json = JsonConvert.SerializeObject(state);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                HttpResponseMessage response;
+
+                if (state.StateID == null)
+                    response = await _httpClient.PostAsync("api/State", content);
+                else
+                    response = await _httpClient.PutAsync($"api/State", content);
+
+                if (response.IsSuccessStatusCode)
+                    return RedirectToAction("Index");
+            }
+            await LoadCountryList();
+            return View("Add", state);
+        }
+
+        public async Task<IActionResult> Delete(string EnStateID)
+        {
+            if (!string.IsNullOrEmpty(EnStateID)) {
+                int StateID = Convert.ToInt32(UrlEncryptor.Decrypt(EnStateID.ToString()));
+                var response = await _httpClient.DeleteAsync($"api/State/{StateID}");
+            }
+            return RedirectToAction("Index");
+        }
+
+        private async Task LoadCountryList()
+        {
+            var response = await _httpClient.GetAsync("api/City/Countries");
+            if (response.IsSuccessStatusCode)
+            {
+                var data = await response.Content.ReadAsStringAsync();
+                var countries = JsonConvert.DeserializeObject<List<CountryDropDownModel>>(data);
+                ViewBag.CountryList = countries;
+            }
+        }
+
+        
+
+    }
+}
+>>>>>>> cc8f604 (Created API's for more tables and tested it sucessfully.)

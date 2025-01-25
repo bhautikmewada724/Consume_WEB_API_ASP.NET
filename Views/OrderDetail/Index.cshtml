@@ -1,0 +1,91 @@
+﻿@model List<OrderDetailModel>
+@{
+    ViewData["Title"] = "Order Detail List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="pagetitle">
+    <h1>Order Detail</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a asp-controller="Home" asp-action="Index">
+                    <i class="fa fa-home"></i>
+                </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Order Detail List</li>
+        </ol>
+    </nav>
+    <div class="d-flex justify-content-end align-items-center">
+        <a class="btn btn-outline-primary" asp-action="Add" asp-controller="OrderDetail">
+            <i class="bi bi-plus-lg"></i>&nbsp;Add OrderDetail
+        </a>
+    </div>
+</div><!-- End Page Title -->
+@if (TempData["OrderDetailInsertMsg"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["OrderdetailInsertMsg"]
+    </div>
+}
+
+<div class="mb-3">
+    <input type="text" class="form-control" id="stateSearch" placeholder="Search Any">
+</div>
+
+<table class="table table-hover table-header-fixed">
+    <thead>
+        <tr>
+
+            
+            <td>Order Date</td>
+            <td>Product Name</td>
+            <td>Quantity</td>
+            <td>Amount</td>
+            <td>Total Amount</td>
+            <td>User Name</td>
+            <th class="text-center">Actions</th>
+        </tr>
+    </thead>
+    <tbody id="stateTable">
+        @foreach (var orderDetail in Model)
+        {
+            <tr>
+                
+                <td>@orderDetail.OrderDate</td>
+                <td>@orderDetail.ProductName</td>
+                <td>@orderDetail.Quantity</td>
+                <td>@orderDetail.Amount</td>
+                <td>@orderDetail.TotalAmount</td>
+                <td>@orderDetail.UserName</td>
+
+                <td class="d-flex text-center">
+                    <a class="btn btn-outline-success btn-xs me-2 " asp-action="Add" asp-route-OrderDetailID="@orderDetail.OrderDetailID">
+                        <i class="bi bi-pencil-fill"></i>
+                    </a>
+                    <form asp-action="Delete"
+                          asp-route-OrderDetailID="@orderDetail.OrderDetailID"
+                          method="post">
+                        <button class="btn btn-outline-danger btn-xs d-flex" type="submit"><i class="bi bi-x"></i></button>
+                    </form>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+</>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#stateSearch").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#stateTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+            });
+        });
+    </script>
+}
